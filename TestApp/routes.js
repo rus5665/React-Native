@@ -1,0 +1,2 @@
+export  const UNSPLASH_HOME = 'UNSPLASH_HOME'
+export  const UNSPLASH_DETAILS = 'UNSPLASH_DETAILS'
