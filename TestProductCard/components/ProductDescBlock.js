@@ -23,39 +23,37 @@ const ProductDescBlock = ({desc}) => {
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </Text>
-            <TouchableOpacity  style={showAllDescButton}>
-                <View>
-                    <IconComponent name={'angle-down'} size={30} color={'#60acff'}/>
-                </View>
-            </TouchableOpacity>
-
             </View>
+                <TouchableOpacity style={showAllDescButton}>
+                    <View>
+                        <IconComponent name={'angle-down'} size={30} color={'#60acff'}/>
+                    </View>
+                </TouchableOpacity>
+
         </View>
     )
 }
 
 
 const styles = StyleSheet.create({
-    DescrConteiner:{
+    DescrConteiner: {
         position: 'relative',
     },
     DescrTextConteiner: {
         color: '#000',
         fontSize: 10,
-        paddingBottom: 20,
         paddingTop: 20,
         paddingLeft: 16,
         paddingRight: 16,
-        backgroundColor: '#ccc'
     },
     DescrText: {
         color: '#000',
     },
     showAllDescButton: {
         height: 50,
-        backgroundColor: 'rgba(0,0, 0, 0.8)',
+        backgroundColor: 'rgba(255,255, 255, 0.8)',
         position: 'absolute',
-        bottom: 20,
+        bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',

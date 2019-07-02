@@ -10,6 +10,7 @@ import DividingLine from "./components/DividingLine";
 import ProductCharacteristicsBlock from "./components/ProductCharacteristicsBlock";
 import SectionTitle from "./components/SectionTitle";
 import ProductDescBlock from "./components/ProductDescBlock";
+import ButtonIconTextBlock from "./components/ButtonIconTextBlock/ButtonIconTextBlock";
 
 
 const instructions = Platform.select({
@@ -38,6 +39,7 @@ export default class App extends Component {
                 <DividingLine/>
                 <ProductCharacteristicsBlock/>
                 <ProductDescBlock />
+                <ButtonIconTextBlock/>
                 <Text style={styles.welcome}>22Welcome to React Native!</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>
