@@ -1,7 +1,11 @@
 import React from 'react'
 import {StyleSheet, TouchableOpacity, Text, View, Image} from 'react-native'
+import {Carousel} from "./Carousel";
 
-const MainFotoSlider = () => {
+
+const MainFotoSlider = ({data}) => {
+
+    console.log('data ', data)
 
     const {
         sliderConteiner,
@@ -14,15 +18,15 @@ const MainFotoSlider = () => {
     return (
         <View style={sliderConteiner}>
             <View style={sliderImageConteiner}>
-                <TouchableOpacity>
-                    <Image
-                        source={require('../img/default-img.png')}
-                    />
-                </TouchableOpacity>
+
+
+
+
+          <Carousel data={data}/>
                 <View style={sliderNumberConteiner}>
-                <View style={sliderNumberBox}>
-                    <Text style={sliderNumberText}>1/10</Text>
-                </View>
+
+
+
                 </View>
             </View>
         </View>

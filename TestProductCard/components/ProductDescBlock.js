@@ -2,6 +2,7 @@ import React from 'react'
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import SectionTitle from "./SectionTitle";
 import IconComponent from "./Icon";
+import DividingLine from "./DividingLine";
 
 const ProductDescBlock = ({desc}) => {
 
@@ -29,6 +30,7 @@ const ProductDescBlock = ({desc}) => {
                         <IconComponent name={'angle-down'} size={30} color={'#60acff'}/>
                     </View>
                 </TouchableOpacity>
+            <DividingLine/>
 
         </View>
     )
@@ -57,7 +59,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-
     }
 
 })

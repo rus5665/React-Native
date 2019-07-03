@@ -47,7 +47,7 @@ export default class HomeScreen extends Component {
             {data.map(item => (
               <ImageCard data={item}
                          key={item.id}
-                         onPress={() => navigation.navigate(UNSPLASH_DETAILS, (data))}
+                         onPress={() => navigation.navigate(UNSPLASH_DETAILS, (item))}
               />
             ))
             }

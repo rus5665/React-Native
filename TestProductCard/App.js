@@ -20,29 +20,47 @@ const instructions = Platform.select({
         'Shake or press menu button for dev menu',
 });
 
+const url = 'http://api.unsplash.com/photos/?client_id=cf49c08b444ff4cb9e4d126b7e9f7513ba1ee58de7906e4360afc1a33d1bf4c0'
+
 const onPress = () => {
 }
 
 export default class App extends Component {
+
+    state = {
+        data: []
+    }
+
+    componentDidMount = async () => {
+        try {
+            const response = await fetch(url)
+            const data = await response.json()
+            this.setState({data})
+        } catch (e) {
+            throw e
+        }
+    }
+
+
     render() {
         return (
             <View style={styles.container}>
                 <Header/>
                 <DividingLine/>
                 <ScrollView>
-                <MainFotoSlider/>
-                <DateAdvertAndViews/>
-                <TitleAdvert title={'Воздушный фильтр Filtron 250 мм'}/>
-                <PriceAndQuantity />
-                <DividingLine/>
-                <ModelCompatibility/>
-                <DividingLine/>
-                <ProductCharacteristicsBlock/>
-                <ProductDescBlock />
-                <ButtonIconTextBlock/>
-                <Text style={styles.welcome}>22Welcome to React Native!</Text>
-                <Text style={styles.instructions}>To get started, edit App.js</Text>
-                <Text style={styles.instructions}>{instructions}</Text>
+                    <MainFotoSlider data={this.state.data}/>
+                    <DateAdvertAndViews/>
+                    <TitleAdvert title={'Воздушный фильтр Filtron 250 мм'}/>
+                    <PriceAndQuantity/>
+                    <DividingLine/>
+                    <ModelCompatibility/>
+                    <DividingLine/>
+                    <ProductCharacteristicsBlock/>
+                    <ProductDescBlock/>
+                    <ButtonIconTextBlock/>
+                    <Text style={styles.welcome}>22Welcome to React Native!</Text>
+                    <Text style={styles.instructions}>To get started, edit App.js</Text>
+                    <Text style={styles.instructions}>{instructions}</Text>
                 </ScrollView>
             </View>
         )

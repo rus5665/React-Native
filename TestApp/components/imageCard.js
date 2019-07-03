@@ -20,6 +20,7 @@ const ImageCard = ({data, onPress}) => {
 
 
 
+
   return (
     <View style={imageContainer}>
       <View style={userContainer}>
@@ -29,7 +30,6 @@ const ImageCard = ({data, onPress}) => {
           />
         </View>
         <Text style={userTitle}>{userName}</Text>
-
       </View>
       <TouchableOpacity onPress={onPress}>
       <View style={imageLayout}>
